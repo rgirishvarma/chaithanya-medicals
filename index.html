@@ -124,6 +124,38 @@
   color: #f57c00;
 }
 
+/* Common clickable shop name styles */
+.shop-name-telugu,
+.shop-name-english {
+  display: inline-block;
+  padding: 16px 40px;
+  border-radius: 18px;
+  transition: all 0.25s ease;
+  user-select: none;
+}
+
+/* Hover glow (desktop) */
+.shop-name-telugu:hover,
+.shop-name-english:hover {
+  box-shadow: 0 0 18px rgba(43, 182, 115, 0.55),
+              0 0 28px rgba(245, 124, 0, 0.35);
+  transform: translateY(-3px);
+}
+
+/* Tap / press animation */
+.shop-name-telugu:active,
+.shop-name-english:active {
+  transform: scale(0.95);
+  box-shadow: 0 0 10px rgba(43, 182, 115, 0.4),
+              0 0 16px rgba(245, 124, 0, 0.3);
+}
+
+/* Optional: subtle background on hover */
+.shop-name-telugu:hover,
+.shop-name-english:hover {
+  background: rgba(255, 255, 255, 0.45);
+}
+
   </style>
 </head>
 
