@@ -15,7 +15,9 @@
       justify-content: center;
       align-items: center;
       height: 100vh;
-      background: #f5f5f5;
+
+      /* Medical theme background */
+      background: linear-gradient(135deg, #e8f8f5, #e3f2fd);
     }
 
     .screen {
@@ -28,9 +30,23 @@
     }
 
     /* Splash Screen */
-    #splash h1 {
-      font-size: 3rem;
+    .shop-name {
       animation: fadeIn 2s ease-in-out;
+    }
+
+    .shop-name .chaithanya {
+      font-size: 3.2rem;
+      font-weight: 800;
+      color: #2bb673; /* Green */
+      letter-spacing: 2px;
+    }
+
+    .shop-name .medicals {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #f57c00; /* Orange */
+      letter-spacing: 4px;
+      margin-top: 6px;
     }
 
     @keyframes fadeIn {
@@ -41,18 +57,36 @@
     /* Buttons */
     .lang-btn {
       padding: 20px 40px;
-      margin: 20px;
-      font-size: 1.5rem;
+      margin: 18px;
+      font-size: 1.4rem;
       cursor: pointer;
       border: none;
-      border-radius: 12px;
-      background: #222;
+      border-radius: 14px;
+      background: #0f9b8e;
       color: #fff;
-      min-width: 260px;
+      min-width: 280px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+    }
+
+    .lang-btn:hover {
+      background: #0c7c71;
     }
 
     .telugu {
       font-family: 'Noto Sans Telugu', sans-serif;
+    }
+
+    /* Mobile */
+    @media (max-width: 600px) {
+      .shop-name .chaithanya {
+        font-size: 2.6rem;
+      }
+      .shop-name .medicals {
+        font-size: 1.6rem;
+      }
+      .lang-btn {
+        font-size: 1.2rem;
+      }
     }
   </style>
 </head>
@@ -61,7 +95,10 @@
 
   <!-- Splash Screen -->
   <div id="splash" class="screen active">
-    <h1>Chaithanya Medicals</h1>
+    <div class="shop-name">
+      <div class="chaithanya">CHAITHANYA</div>
+      <div class="medicals">MEDICALS</div>
+    </div>
   </div>
 
   <!-- Language Selection -->
