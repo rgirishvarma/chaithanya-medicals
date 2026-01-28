@@ -156,8 +156,45 @@
   background: rgba(255, 255, 255, 0.45);
 }
 
+/* Common clickable shop name styles */
+.shop-name-telugu,
+.shop-name-english {
+  display: inline-block;
+  padding: 16px 40px;
+  border-radius: 18px;
+  transition: all 0.2s ease;
+  user-select: none;
+  cursor: pointer;
+}
+
+/* Hover glow (desktop) */
+.shop-name-telugu:hover,
+.shop-name-english:hover {
+  background: rgba(255, 255, 255, 0.45);
+  box-shadow: 
+    0 0 18px rgba(43, 182, 115, 0.55),
+    0 0 28px rgba(245, 124, 0, 0.35);
+  transform: translateY(-3px);
+}
+
+/* TAP / PRESS glow (color change) */
+.shop-name-telugu:active,
+.shop-name-english:active {
+  background: rgba(255, 255, 255, 0.7);
+  transform: scale(0.94);
+
+  /* Strong red + green medical glow */
+  box-shadow:
+    0 0 12px rgba(229, 57, 53, 0.8),
+    0 0 24px rgba(43, 182, 115, 0.6);
+}
+
   </style>
 </head>
+
+<audio id="clickSound">
+  <source src="https://assets.mixkit.co/sfx/preview/mixkit-soft-click-1124.mp3" type="audio/mpeg">
+</audio>
 
 <body>
 
@@ -194,7 +231,24 @@
       document.getElementById('splash').classList.remove('active');
       document.getElementById('language').classList.add('active');
     }, 2500);
-  </script>
+
+  const clickSound = document.getElementById("clickSound");
+
+  document.querySelectorAll(".shop-name-telugu, .shop-name-english")
+    .forEach(el => {
+      el.addEventListener("click", () => {
+        clickSound.currentTime = 0;
+        clickSound.volume = 0.25; // very subtle
+        clickSound.play();
+      });
+    });
+
+  setTimeout(() => {
+    document.getElementById('splash').classList.remove('active');
+    document.getElementById('language').classList.add('active');
+  }, 2500);
+</script>
+
 
 </body>
 </html>
