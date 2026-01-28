@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="te">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>చైతన్య మెడికల్స్ | Medical Store</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Telugu:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Noto Sans Telugu', Arial, sans-serif;
+            color: #2b2b2b;
+            background: #f6fbff;
+        }
+        header {
+            background: linear-gradient(90deg, #e8f8f5, #e3f2fd);
+            color: #0f4c81;
+            padding: 40px 20px;
+            text-align: center;
+        }
+            50% { background-position: center center; }
+            100% { background-position: center top; }
+        }
+        header h1 {
+            margin: 0;
+            font-size: 32px;
+        }
+        header p {
+            margin-top: 8px;
+            font-size: 16px;
+        }
+        nav {
+            background: #ffffff;
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            padding: 14px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        nav a {
+            text-decoration: none;
+            color: #0f9b8e;
+            font-weight: 600;
+        }
+        section {
+            padding: 30px 20px;
+            max-width: 1100px;
+            margin: auto;
+        }
+        .card {
+            background: #ffffff;
+            padding: 28px;
+            border-radius: 14px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+            margin-bottom: 28px;
+        }
+        h2 {
+            color: #0f9b8e;
+            margin-bottom: 15px;
+        }
+        .services {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+        }
+        .service-box {
+            background: #ffffff;
+            padding: 22px;
+            border-radius: 12px;
+            text-align: center;
+            border: 1px solid #e6f0f8;
+        }
+        .service-box ul li {
+            color: #4caf50;
+        }
+        .service-box i {
+            font-size: 30px;
+            color: #2bb673;
+            margin-bottom: 10px;
+        }
+        .contact-info p {
+            margin: 8px 0;
+        }
+        iframe {
+            border-radius: 12px;
+        }
+        footer {
+            background: #e3f2fd;
+            color: #0f4c81;
+            text-align: center;
+            padding: 18px;
+            margin-top: 40px;
+        }
+        /* Floating Buttons */
+        .floating-buttons {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            z-index: 999;
+        }
+        .floating-buttons a {
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 24px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        }
+        .call-btn { background: #1976d2; }
+        .whatsapp-btn { background: #25D366; }
+    
+        /* Mobile Optimization */
+        @media (max-width: 768px) {
+            header h1 { font-size: 26px; }
+            nav { flex-wrap: wrap; gap: 14px; }
+            section { padding: 22px 14px; }
+            .services { grid-template-columns: 1fr; }
+            .floating-buttons { right: 14px; bottom: 14px; }
+        }
+            nav { flex-wrap: wrap; gap: 14px; }
+            section { padding: 22px 14px; }
+            .services { grid-template-columns: 1fr; }
+            .floating-buttons { right: 14px; bottom: 14px; }
+        }
+        @media (max-width: 480px) {
+            header p { font-size: 14px; }
+            .card { padding: 20px; }
+            .floating-buttons a { width: 50px; height: 50px; }
+        }
+    .brand-chaithanya {
+            color: #2bb673;
+            font-weight: 700;
+        }
+        .brand-medicals {
+            color: #f57c00;
+            font-weight: 700;
+        }
+    .shop-title {
+            font-size: 40px;
+            color: #2bb673;
+            font-weight: 700;
+            margin: 0;
+        }
+        .shop-tagline {
+            margin-top: 10px;
+            font-size: 17px;
+            color: #f57c00;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1 class="shop-title">చైతన్య మందుల షాపు</h1>
+<p class="shop-tagline">మీ కుటుంబ ఆరోగ్యానికి నమ్మకమైన మెడికల్ స్టోర్</p>
+</header>
+
+<nav>
+    <a href="#about">మా గురించి</a>
+    <a href="#services">సేవలు</a>
+    <a href="#contact">సంప్రదించండి</a>
+    <a href="#location">లొకేషన్</a>
+</nav>
+
+<section id="about">
+    <div class="card">
+        <h2>మా గురించి</h2>
+        <p>
+            చైతన్య మెడికల్స్, రాయచోటిలో ఉన్న ఒక విశ్వసనీయమైన మెడికల్ షాప్.
+            అన్ని రకాల అలొపతి మందులు, డాక్టర్ ప్రిస్క్రిప్షన్ మందులు
+            నాణ్యతతో మరియు సరసమైన ధరలకు అందుబాటులో ఉన్నాయి.
+        </p>
+        <p><strong>పని సమయం:</strong> ప్రతి రోజు ఉదయం 6:00 AM – రాత్రి 10:00 PM</p>
+    </div>
+</section>
+
+<section id="services">
+    <h2>మా సేవలు</h2>
+    <div class="services">
+
+        <div class="service-box">
+            <i class="fa-solid fa-pills"></i>
+            <p><strong>💊 అన్ని రకాల అలొపతి మందులు</strong></p>
+            <ul style="text-align:center; padding-left:0; line-height:1.7; list-style-position: inside;">
+                <li>మాత్రలు</li>
+                <li>గుళికలు</li>
+                <li>సిరప్లు</li>
+                <li>ఇంజెక్షన్లు</li>
+            </ul>
+        </div>
+
+        <div class="service-box">
+            <i class="fa-solid fa-file-prescription"></i>
+            <p><strong>🧾 డాక్టర్ ప్రిస్క్రిప్షన్ మందులు</strong></p>
+            <ul style="text-align:center; padding-left:0; line-height:1.7; list-style-position: inside;">
+                <li>దీర్ఘకాలిక మందులు</li>
+                <li>అత్యవసర మందులు</li>
+            </ul>
+        </div>
+
+        <div class="service-box">
+            <i class="fa-solid fa-heart-pulse"></i>
+            <p><strong>❤️ ఆరోగ్య సంరక్షణ ఉత్పత్తులు</strong></p>
+            <ul style="text-align:center; padding-left:0; line-height:1.7; list-style-position: inside;">
+                <li>BP మానిటర్</li>
+                <li>గ్లూకోమీటర్</li>
+                <li>థర్మామీటర్</li>
+            </ul>
+        </div>
+
+        <div class="service-box">
+            <i class="fa-solid fa-clock"></i>
+            <p><strong>⏰ అన్ని రోజులు సేవలు</strong></p>
+            <ul style="text-align:center; padding-left:0; line-height:1.7; list-style-position: inside;">
+                <li>6:00 AM – 10:00 PM</li>
+            </ul>
+        </div>
+
+    </div>
+</section>
+
+
+
+<section id="contact">
+    <div class="card contact-info">
+        <h2>సంప్రదించండి</h2>
+        <p><i class="fa-solid fa-location-dot"></i> జగదాంబ సెంటర్, కొత్తపేట, రాయచోటి, అన్నమయ్య జిల్లా</p>
+        <p><i class="fa-solid fa-phone"></i> <a href="tel:9845082419">9845082419</a></p>
+        <p><i class="fa-solid fa-envelope"></i> <a href="mailto:chaithanyamedicals@gmail.com">chaithanyamedicals@gmail.com</a></p>
+    </div>
+</section>
+
+<section id="enquiry">
+    <div class="card">
+        <h2>మందుల కోసం విచారణ (Medicines Enquiry)</h2>
+        <p>మీకు కావలసిన మందుల వివరాలు పంపండి. మేము త్వరగా స్పందిస్తాము.</p>
+        <form>
+            <input type="text" placeholder="మీ పేరు" required style="width:100%;padding:10px;margin:8px 0;">
+            <input type="tel" placeholder="మొబైల్ నంబర్" required style="width:100%;padding:10px;margin:8px 0;">
+            <textarea placeholder="కావలసిన మందుల పేర్లు" rows="4" required style="width:100%;padding:10px;margin:8px 0;"></textarea>
+            <button type="button" style="background:#2bb673;color:white;padding:12px 25px;border:none;border-radius:6px;font-size:16px;">
+                విచారణ పంపండి
+            </button>
+            <p style="font-size:13px;color:#666;margin-top:8px;">గమనిక: ఇది enquiry డెమో ఫారం. WhatsApp ద్వారా కూడా సంప్రదించవచ్చు.</p>
+        </form>
+    </div>
+</section>
+
+
+
+
+
+<section id="location">
+    <h2>మా లొకేషన్</h2>
+    <iframe src="https://www.google.com/maps?q=Jagadamba+Center,+Kothapeta,+Rayachoty,+Andhra+Pradesh&output=embed"
+        width="100%" height="320" loading="lazy"></iframe>
+</section>
+
+<footer>
+    <p>© 2026 చైతన్య మెడికల్స్ | All Rights Reserved</p>
+</footer>
+
+<!-- Floating Buttons -->
+<div class="floating-buttons">
+    <a href="tel:9845082419" class="call-btn" title="కాల్ చేయండి">
+        <i class="fa-solid fa-phone"></i>
+    </a>
+    <a href="https://wa.me/919845082419" target="_blank" class="whatsapp-btn" title="WhatsApp చాట్">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+</div>
+
+</body>
+</html>
