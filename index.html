@@ -88,6 +88,42 @@
         font-size: 1.2rem;
       }
     }
+
+
+/* Colored shop names on 2nd slide */
+.shop-name-telugu {
+  font-family: 'Noto Sans Telugu', sans-serif;
+  margin-bottom: 18px;
+}
+
+.shop-name-telugu .chaithanya {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #2bb673; /* Green */
+}
+
+.shop-name-telugu .medicals {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #f57c00; /* Orange */
+}
+
+.shop-name-english {
+  margin-top: 25px;
+}
+
+.shop-name-english .chaithanya {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #2bb673;
+}
+
+.shop-name-english .medicals {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #f57c00;
+}
+
   </style>
 </head>
 
@@ -101,24 +137,22 @@
     </div>
   </div>
 
- <!-- Language Selection -->
+ 
+  <!-- Language Selection -->
 <div id="language" class="screen">
 
-  <!-- Shop Name again -->
-  <div class="shop-name" style="margin-bottom: 30px;">
-    <div class="chaithanya">CHAITHANYA</div>
-    <div class="medicals">MEDICALS</div>
-  </div>
+  <!-- Telugu shop name -->
+<div class="shop-name-telugu" onclick="location.href='telugu.html'" style="cursor:pointer;">
+  <div class="chaithanya">చైతన్య</div>
+  <div class="medicals">మెడికల్స్</div>
+</div>
 
-  <button class="lang-btn telugu" onclick="location.href='telugu.html'">
-    చైతన్య మెడికల్స్
-  </button>
+<!-- English shop name -->
+<div class="shop-name-english" onclick="location.href='english.html'" style="cursor:pointer;">
+  <div class="chaithanya">Chaithanya</div>
+  <div class="medicals">Medicals</div>
+</div>
 
-  <br>
-
-  <button class="lang-btn" onclick="location.href='english.html'">
-    Chaithanya Medicals
-  </button>
 
 </div>
 
@@ -132,4 +166,3 @@
 
 </body>
 </html>
-
