@@ -200,14 +200,64 @@
   background-position: left bottom, right top;
   background-repeat: no-repeat;
 }
+
+/* Floating pills background */
+.pills-bg {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  z-index: -1; /* stays behind content */
+}
+
+/* Pill shape */
+.pill {
+  position: absolute;
+  width: 60px;
+  height: 26px;
+  border-radius: 30px;
+  background: linear-gradient(90deg, #ffffff 50%, #e53935 50%);
+  opacity: 0.25;
+  animation: floatPill 14s linear infinite;
+}
+
+/* Different sizes & positions */
+.p1 { left: 10%; animation-duration: 16s; }
+.p2 { left: 30%; width: 50px; height: 22px; animation-duration: 18s; }
+.p3 { left: 55%; width: 70px; height: 30px; animation-duration: 20s; }
+.p4 { left: 75%; width: 45px; height: 20px; animation-duration: 15s; }
+.p5 { left: 90%; width: 65px; height: 28px; animation-duration: 19s; }
+
+/* Floating animation */
+@keyframes floatPill {
+  from {
+    transform: translateY(110vh) rotate(0deg);
+  }
+  to {
+    transform: translateY(-120px) rotate(360deg);
+  }
+}
+
+/* Hide pills slightly on very small screens */
+@media (max-width: 480px) {
+  .pill {
+    opacity: 0.18;
+  }
+}
+
   </style>
 </head>
 
-<audio id="clickSound">
-  <source src="https://assets.mixkit.co/sfx/preview/mixkit-soft-click-1124.mp3" type="audio/mpeg">
-</audio>
 
 <body>
+
+<!-- Floating Pills Background -->
+<div class="pills-bg">
+  <span class="pill p1"></span>
+  <span class="pill p2"></span>
+  <span class="pill p3"></span>
+  <span class="pill p4"></span>
+  <span class="pill p5"></span>
+</div>
 
   <!-- Splash Screen -->
   <div id="splash" class="screen active">
@@ -261,6 +311,9 @@
   }, 2500);
 </script>
 
+<audio id="clickSound">
+  <source src="https://assets.mixkit.co/sfx/preview/mixkit-soft-click-1124.mp3" type="audio/mpeg">
+</audio>
 
 </body>
 </html>
