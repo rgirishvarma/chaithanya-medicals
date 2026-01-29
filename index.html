@@ -4,7 +4,12 @@
   <meta charset="UTF-8" />
   <title>Chaithanya Medicals</title>
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport"
+      content="width=device-width,
+               initial-scale=1,
+               maximum-scale=1,
+               user-scalable=no">
+
 
   <!-- Telugu Font -->
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Telugu&display=swap" rel="stylesheet">
@@ -516,6 +521,43 @@
   .shop-name .chaithanya {
     font-size: 2.6rem;
   }
+}
+
+/* ===============================
+   PWA (Standalone App) Font Fix
+=============================== */
+@media all and (display-mode: standalone) {
+
+  body {
+    font-size: 19px;
+  }
+
+  .shop-name .chaithanya {
+    font-size: 3.2rem;
+  }
+
+  .shop-name .medicals {
+    font-size: 2.2rem;
+  }
+
+  .shop-name-telugu .chaithanya,
+  .shop-name-english .chaithanya {
+    font-size: 2.5rem;
+  }
+
+  .shop-name-telugu .medicals,
+  .shop-name-english .medicals {
+    font-size: 2rem;
+  }
+
+  .full-view-buttons button {
+    font-size: 18px;
+    padding: 18px 28px;
+  }
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
 }
 
   </style>
