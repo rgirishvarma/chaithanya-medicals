@@ -233,20 +233,109 @@
   }
 }
 
+/* ===============================
+   Floating Medical Background
+================================ */
+.medical-bg {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  z-index: -1;
+}
+
+/* ---------- Pills ---------- */
+.pill {
+  position: absolute;
+  width: 64px;
+  height: 28px;
+  border-radius: 40px;
+  background: linear-gradient(90deg, #ffffff 50%, #e53935 50%);
+  opacity: 0.28;
+  filter: blur(1.5px);
+  animation: floatUp 18s linear infinite;
+}
+
+.p1 { left: 8%; animation-duration: 16s; }
+.p2 { left: 22%; width: 50px; height: 22px; animation-duration: 20s; }
+.p3 { left: 40%; width: 72px; height: 30px; animation-duration: 22s; }
+.p4 { left: 58%; width: 46px; height: 20px; animation-duration: 17s; }
+.p5 { left: 75%; width: 68px; height: 28px; animation-duration: 19s; }
+.p6 { left: 90%; width: 55px; height: 24px; animation-duration: 21s; }
+
+/* ---------- Syringes ---------- */
+.syringe {
+  position: absolute;
+  width: 80px;
+  height: 10px;
+  border-radius: 6px;
+  background: linear-gradient(
+    90deg,
+    #cfd8dc 0%,
+    #cfd8dc 15%,
+    #ffffff 15%,
+    #ffffff 75%,
+    #90caf9 75%
+  );
+  opacity: 0.25;
+  filter: blur(1.8px);
+  animation: floatUpRotate 24s linear infinite;
+}
+
+.s1 { left: 15%; animation-duration: 24s; }
+.s2 { left: 50%; animation-duration: 28s; }
+.s3 { left: 82%; animation-duration: 26s; }
+
+/* ---------- Animations ---------- */
+@keyframes floatUp {
+  from {
+    transform: translateY(120vh) rotate(0deg);
+  }
+  to {
+    transform: translateY(-150px) rotate(360deg);
+  }
+}
+
+@keyframes floatUpRotate {
+  from {
+    transform: translateY(120vh) rotate(20deg);
+  }
+  to {
+    transform: translateY(-150px) rotate(380deg);
+  }
+}
+
+/* Mobile optimization */
+@media (max-width: 600px) {
+  .pill,
+  .syringe {
+    opacity: 0.18;
+    filter: blur(1px);
+  }
+}
+
+
   </style>
 </head>
 
 
 <body>
 
-<!-- Floating Pills Background -->
-<div class="pills-bg">
+<!-- Floating Medical Background -->
+<div class="medical-bg">
+  <!-- Pills -->
   <span class="pill p1"></span>
   <span class="pill p2"></span>
   <span class="pill p3"></span>
   <span class="pill p4"></span>
   <span class="pill p5"></span>
+  <span class="pill p6"></span>
+
+  <!-- Syringes -->
+  <span class="syringe s1"></span>
+  <span class="syringe s2"></span>
+  <span class="syringe s3"></span>
 </div>
+
 
   <!-- Splash Screen -->
   <div id="splash" class="screen active">
