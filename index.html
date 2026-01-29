@@ -507,17 +507,17 @@
 
 
   <script>
-  // Splash → Language
+  // Splash → Language (2.5 seconds)
   setTimeout(() => {
     document.getElementById('splash').classList.remove('active');
     document.getElementById('language').classList.add('active');
   }, 2500);
 
-  // Language → Split View after 10 seconds
+  // Language → Split View after 3 seconds
   setTimeout(() => {
     document.getElementById('language').classList.remove('active');
     document.getElementById('splitView').classList.add('active');
-  }, 12500); // 2.5s + 10s
+  }, 5500); // 2.5s + 3s
 </script>
 
 
