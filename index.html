@@ -345,6 +345,93 @@
   display: flex;
 }
 
+/* Divider container */
+.divider {
+  width: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Divider lines */
+.divider-line {
+  width: 4px;
+  height: 40%;
+  background: linear-gradient(#2bb673, #f57c00);
+  border-radius: 4px;
+}
+
+/* Medical icon */
+.divider-icon {
+  width: 42px;
+  height: 42px;
+  margin: 10px 0;
+  background: white;
+  color: #e53935;
+  font-size: 24px;
+  font-weight: bold;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 12px rgba(229,57,53,0.5);
+  animation: pulseIcon 2s infinite;
+}
+
+/* Pulse animation */
+@keyframes pulseIcon {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.15); }
+  100% { transform: scale(1); }
+}
+
+/* Mobile divider becomes horizontal */
+@media (max-width: 768px) {
+  .divider {
+    flex-direction: row;
+    width: 100%;
+    height: 60px;
+  }
+
+  .divider-line {
+    width: 40%;
+    height: 4px;
+  }
+}
+
+/* Full view buttons */
+.full-view-buttons {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 14px;
+  z-index: 999;
+}
+
+.full-view-buttons button {
+  padding: 12px 22px;
+  font-size: 15px;
+  border-radius: 25px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  color: white;
+  background: linear-gradient(135deg, #2bb673, #f57c00);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.25);
+  transition: all 0.25s ease;
+}
+
+.full-view-buttons button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(0,0,0,0.35);
+}
+
+.full-view-buttons button:active {
+  transform: scale(0.95);
+}
 
   </style>
 </head>
@@ -382,9 +469,23 @@
 
 <!-- Split Screen View -->
 <div id="splitView" class="screen split-view">
-  <iframe src="telugu.html" title="Telugu Site"></iframe>
-  <iframe src="english.html" title="English Site"></iframe>
+  <iframe src="telugu.html"></iframe>
+
+  <div class="divider">
+    <div class="divider-line"></div>
+    <div class="divider-icon">✚</div>
+    <div class="divider-line"></div>
+  </div>
+
+  <iframe src="english.html"></iframe>
+
+<div class="full-view-buttons">
+  <button onclick="location.href='telugu.html'">View Full Telugu</button>
+  <button onclick="location.href='english.html'">View Full English</button>
 </div>
+
+</div>
+
 
 <div id="language" class="screen">
 
