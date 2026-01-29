@@ -4,8 +4,12 @@
   <meta charset="UTF-8" />
   <title>Chaithanya Medicals</title>
 
+
   <!-- Telugu Font -->
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Telugu&display=swap" rel="stylesheet">
+
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#2bb673">
 
 
   <style>
@@ -520,6 +524,13 @@
   }, 5500); // 2.5s + 3s
 </script>
 
+<script>
+  if ("serviceWorker" in navigator) {
+    window.addEventListener("load", () => {
+      navigator.serviceWorker.register("service-worker.js");
+    });
+  }
+</script>
 
 </body>
 </html>
